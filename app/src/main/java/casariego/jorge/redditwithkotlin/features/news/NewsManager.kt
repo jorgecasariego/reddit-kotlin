@@ -5,12 +5,15 @@ import casariego.jorge.redditwithkotlin.api.NewsRestAPI
 import casariego.jorge.redditwithkotlin.commons.RedditNews
 import casariego.jorge.redditwithkotlin.commons.RedditNewsItem
 import rx.Observable
+import javax.inject.Inject
+import javax.inject.Singleton
 
 
 /**
  * Created by jorgecasariego on 16/8/17.
  */
-class NewsManager(private val api: NewsAPI = NewsRestAPI()) {
+@Singleton
+class NewsManager @Inject constructor(private val api: NewsAPI) {
 
     /**
     *
